@@ -1,0 +1,41 @@
+logging:
+  level:
+    org.hibernate: DEBUG
+    org.springframework.orm.jpa: DEBUG
+server:
+  port: 8080
+
+spring:
+  application:
+    name: customer
+  datasource:
+    username: 'tellfuruser'
+    url: jdbc:postgresql://localhost:5432/customer
+    password: 'password'
+    #driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL9Dialect
+        format_sql: 'true'
+    hibernate:
+      ddl-auto: update
+    show-sql: 'true'
+
+
+
+#spring:
+#  application:
+#    name: customer
+#  datasource:
+#    username: tellfuruser
+#    url: jdbc:postgresql://localhost:5432/customer
+#    password: password
+#  jpa:
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.PostgreSQL9Dialect
+#        format_sql: true
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
